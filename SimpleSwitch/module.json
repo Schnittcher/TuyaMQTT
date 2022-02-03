@@ -1,0 +1,12 @@
+{
+    "id": "{48F8E36E-1C8F-7595-0EEF-597D32440E1A}",
+    "name": "SimpleSwitch",
+    "type": 3,
+    "vendor": "SimpleSwitch",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "TM",
+    "url": ""
+}

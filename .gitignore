@@ -1,0 +1,6 @@
+.DS_Store
+.idea/
+.vscode/
+libs/composer.*
+libs/phpunit.*
+script.tmp

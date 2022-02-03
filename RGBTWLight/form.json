@@ -1,0 +1,32 @@
+{
+    "elements": [
+        {
+            "type": "ValidationTextBox",
+            "name": "MQTTBaseTopic",
+            "caption": "MQTT Base Topic"
+        },
+        {
+            "type": "ValidationTextBox",
+            "name": "MQTTTopic",
+            "caption": "MQTT Topic"
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Expert settings",
+            "items": [
+                {
+                    "type": "CheckBox",
+                    "name": "WhiteBrightness",
+                    "caption": "WhiteBrightness"
+                },
+                {
+                    "type": "CheckBox",
+                    "name": "ColorTemperature",
+                    "caption": "ColorTemperature"
+                }
+            ]
+        }
+    ],
+    "actions": [],
+    "status": []
+}
