@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR__ . '/../libs/helper/VariableProfileHelper.php') . '}');
-eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR__ . '/../libs/helper/DebugHelper.php') . '}');
-eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR__ . '/../libs/helper/ColorHelper.php') . '}');
+eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR__ . '/../libs/vendor/SymconModulHelper/VariableProfileHelper.php') . '}');
+eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR__ . '/../libs/vendor/SymconModulHelper/DebugHelper.php') . '}');
+eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR__ . '/../libs/vendor/SymconModulHelper/ColorHelper.php') . '}');
 
     class RGBTWLight extends IPSModule
     {
@@ -86,11 +86,11 @@ eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR_
                     break;
                 case 'Color':
                     $RGB = $this->HexToRGB($Value);
-                    $this->SendDebug('RequestAction :: Color',$RGB,0);
+                    $this->SendDebug('RequestAction :: Color', $RGB, 0);
                     $HSV = $this->RGBtoHSV($RGB[0], $RGB[1], $RGB[2]);
-                    $this->SendDebug('RequestAction :: HSV',$HSV,0);
+                    $this->SendDebug('RequestAction :: HSV', $HSV, 0);
                     $HSV = implode(',', $HSV);
-                    $this->SendDebug('RequestAction :: HSV implode',$HSV,0);
+                    $this->SendDebug('RequestAction :: HSV implode', $HSV, 0);
                     $this->SendPayload('hsb_command', strval($HSV));
                     break;
                 case 'Mode':
@@ -122,6 +122,7 @@ eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR_
                             case 'OFF':
                                 $this->SetValue('State', false);
                                 // FIXME: No break. Please add proper comment if intentional
+                                // No break. Add additional comment above this line if intentional
                             default:
                                 # code...
                                 break;
