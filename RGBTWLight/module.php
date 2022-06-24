@@ -76,7 +76,7 @@ eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR_
         {
             switch ($Ident) {
                 case 'State':
-                    $this->SendPayload('command', strval($Value));
+                    $this->SendPayload('command', $Value ? 'true' : 'false');
                     break;
                 case 'WhiteBrightness':
                     $this->SendPayload('white_brightness_command', strval($Value));
