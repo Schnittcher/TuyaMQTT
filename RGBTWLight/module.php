@@ -121,8 +121,7 @@ eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR_
                                 break;
                             case 'OFF':
                                 $this->SetValue('State', false);
-                                // FIXME: No break. Please add proper comment if intentional
-                                // No break. Add additional comment above this line if intentional
+                                break;
                             default:
                                 # code...
                                 break;
