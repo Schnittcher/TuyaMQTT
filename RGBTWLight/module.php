@@ -150,7 +150,7 @@ eval('declare(strict_types=1);namespace TuyaMQTT {?>' . file_get_contents(__DIR_
                         $this->SetValue('Mode', $Payload);
                     }
                     if (fnmatch('*/color_temp_state', $Buffer['Topic'])) {
-                        $this->SetValue('ColorTemp', $Payload);
+                        $this->SetValue('ColorTemperature', $Payload);
                     }
                 }
             }
